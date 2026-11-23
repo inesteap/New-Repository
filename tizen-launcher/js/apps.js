@@ -41,7 +41,7 @@ var LAUNCHER_CONFIG = {
   ],
   grid: [
     { id: "youtube", type: "app", appId: "111299001912", label: "YouTube", glyph: "▶",
-      colors: ["#140000", "#c4001f", "#ff3b4f"], kicker: "App", desc: "Videos.", action: "Abrir" },
+      colors: ["#050505", "#161618", "#3a3a3e"], kicker: "App", desc: "Videos.", action: "Abrir" },
     { id: "disney", type: "app", appId: "3201901017640", label: "Disney+", glyph: "D+",
       colors: ["#020616", "#10287a", "#3c74e0"], kicker: "App", desc: "Streaming.", action: "Abrir" },
     { id: "prime", type: "app", appId: "3201910019365", label: "Prime Video", glyph: "prime",
