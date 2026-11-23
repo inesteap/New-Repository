@@ -12,9 +12,6 @@ Pon aquí los PNG con estos nombres (coinciden con el `id` de `js/apps.js`):
 | `youtube.png` | YouTube |
 | `disney.png` | Disney+ |
 | `prime.png` | Prime Video |
-| `applemusic.png` | Apple Music |
-| `spotify.png` | Spotify |
-| `plex.png` | Plex |
 
 - Formato: PNG con fondo transparente, de preferencia el logo en blanco, mínimo unos 600 px de ancho.
 - Si falta un archivo, ese ícono muestra el texto de respaldo.
