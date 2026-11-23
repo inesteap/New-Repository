@@ -20,7 +20,7 @@
  */
 var LAUNCHER_CONFIG = {
   dock: [
-    { id: "ps5", type: "hdmi", port: 1, label: "PlayStation 5 Pro", glyph: "PS5",
+    { id: "ps5", type: "hdmi", port: 1, label: "PlayStation 5", glyph: "PS5",
       colors: ["#030a1f", "#0f3bb5", "#4f8bff"],
       kicker: "Consola", desc: "Retoma tus juegos justo donde los dejaste.",
       action: "Jugar", meta: "HDMI 1 · 4K · 120 Hz · VRR" },
