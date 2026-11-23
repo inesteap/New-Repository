@@ -7,20 +7,20 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="backdrop"></div>
-  <div id="ui">
-    <header class="topbar">
-      <div class="clock" id="clock">--:--</div>
-    </header>
-
-    <section class="shelf" id="shelf">
+  <div id="shelf">
+    <div class="shelf-art" id="artA"></div>
+    <div class="shelf-art" id="artB"></div>
+    <div class="shelf-scrim"></div>
+    <div class="shelf-info" id="shelfInfo">
       <div class="shelf-kicker" id="shelfKicker"></div>
       <h1 class="shelf-title" id="shelfTitle"></h1>
-      <p class="shelf-sub" id="shelfSub"></p>
-    </section>
-
-    <main id="rows"></main>
+      <p class="shelf-desc" id="shelfDesc"></p>
+      <div class="shelf-actions"><span class="pill" id="shelfAction"></span><span class="shelf-meta" id="shelfMeta"></span></div>
+    </div>
   </div>
+  <div id="frost"></div>
+
+  <main id="home"></main>
 
   <div id="toast" class="toast"></div>
 

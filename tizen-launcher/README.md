@@ -1,12 +1,18 @@
 # Hogar: launcher estilo set-top box para Samsung Tizen
 
-App web para Tizen con interfaz oscura y minimalista: "top shelf" que cambia de color, fichas redondeadas con efecto de inclinación y navegación con el control remoto. Sin anuncios ni rastreo.
+App web para Tizen con una estructura inspirada en tvOS:
 
-![Vista previa](preview.png)
+- **Top shelf a pantalla completa** que cambia con fundido según el ícono enfocado de la fila superior.
+- **Fila superior (dock)** con lo más usado: PS5, Switch 2, PC, Apple TV y Netflix.
+- **Cuadrícula de apps** debajo. Al bajar, el fondo se desenfoca y oscurece, como en tvOS.
+- **Íconos 5:3** con inclinación parallax, brillo especular y el nombre solo bajo el ícono enfocado.
+- **Tipografía Helvetica Neue** (con Inter como respaldo; ver "Fuente").
+- Sin anuncios ni rastreo.
 
-- **Juegos:** cambia la entrada a HDMI 1/2/3 (PS5, Switch 2, PC).
-- **Apps:** abre Apple TV, Netflix, YouTube, Disney+, Prime Video, Spotify y Plex.
-- **Atrás** desde un HDMI vuelve al launcher. En la pantalla de inicio, Atrás no sale a Smart Hub.
+![Top shelf](preview.png)
+![Cuadrícula](preview-grid.png)
+
+**Controles:** con OK abres la app o cambias la entrada HDMI. Atrás desde un HDMI vuelve al launcher; Atrás en la cuadrícula sube al dock; en el dock no sale a Smart Hub.
 
 ## Qué es y qué no es
 
@@ -37,9 +43,22 @@ App web para Tizen con interfaz oscura y minimalista: "top shelf" que cambia de 
 
 En *Ajustes → General → Funciones inteligentes*, activa **"Autoejecutar última app"**. Si Hogar es lo último que usaste, el televisor arranca directamente en Hogar.
 
+## Fuente
+
+Helvetica Neue es comercial (Linotype) y no se incluye. Si tienes licencia, copia `HelveticaNeue-Regular.otf`, `HelveticaNeue-Medium.otf` y `HelveticaNeue-Bold.otf` en `fonts/` y la app la usa automáticamente. Si no, usa **Inter** (incluida, licencia OFL, ver `fonts/LICENSE-Inter.txt`).
+
+## Imágenes propias (para un look más cercano a tvOS)
+
+tvOS se ve como se ve, sobre todo, por su arte: carátulas y fondos a pantalla completa. Para uso personal puedes agregar las tuyas:
+
+- `img/shelf/<id>.jpg`: fondo de 1920×1080 del top shelf (arte de un juego, foto de tu setup, etc.).
+- `img/icons/<id>.png`: ícono de 400×240 (logo de la app o consola).
+
+Luego, en `js/apps.js`, agrega `shelf: "img/shelf/ps5.jpg"` o `icon: "img/icons/ps5.png"` a la ficha. Si no pones imagen, se genera un fondo de degradado con el color de la ficha.
+
 ## Personalizar
 
-Edita `js/apps.js`:
+Edita `js/apps.js`. Mueve fichas entre `dock` (fila superior) y `grid`.
 
 - **Puerto HDMI:** cambia `port` para que coincida con donde conectaste cada consola.
 - **Apps:** cambia los `appId`. Los ID incluidos son los que publica la comunidad y pueden variar según la región o el firmware. Para ver los de tu televisor, con `sdb` conectado:
