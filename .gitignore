@@ -1,0 +1,9 @@
+# Logos e imágenes de marcas: solo para uso local, no se suben al repositorio.
+tizen-launcher/img/logos/*
+!tizen-launcher/img/logos/LEEME.md
+tizen-launcher/img/icons/*
+tizen-launcher/img/shelf/*
+# Fuentes comerciales
+tizen-launcher/fonts/HelveticaNeue-*
+# Paquetes generados
+*.wgt

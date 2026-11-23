@@ -51,10 +51,13 @@ Helvetica Neue es comercial (Linotype) y no se incluye. Si tienes licencia, copi
 
 tvOS se ve como se ve, sobre todo, por su arte: carátulas y fondos a pantalla completa. Para uso personal puedes agregar las tuyas:
 
-- `img/shelf/<id>.jpg`: fondo de 1920×1080 del top shelf (arte de un juego, foto de tu setup, etc.).
-- `img/icons/<id>.png`: ícono de 400×240 (logo de la app o consola).
+- **Logos:** `img/logos/<id>.png`. Se detectan solos, sin tocar código: un PNG transparente (de preferencia blanco) se coloca centrado sobre el color del ícono y como marca de agua en el top shelf. Mira `img/logos/LEEME.md` para los nombres de archivo.
+- **Fondos:** `img/shelf/<id>.jpg` de 1920×1080 para el top shelf (arte de un juego, foto de tu setup, etc.). En `js/apps.js`, agrega `shelf: "img/shelf/ps5.jpg"` a la ficha.
+- **Ícono completo:** `img/icons/<id>.png` de 400×240, con el fondo incluido. En `js/apps.js`, agrega `icon: "img/icons/netflix.png"` a la ficha.
 
-Luego, en `js/apps.js`, agrega `shelf: "img/shelf/ps5.jpg"` o `icon: "img/icons/ps5.png"` a la ficha. Si no pones imagen, se genera un fondo de degradado con el color de la ficha.
+Si no hay imagen, se usan el texto y un degradado con el color de la ficha.
+
+Estas carpetas están en `.gitignore`: los logos y el arte de marcas se quedan en tu computadora y no se suben a GitHub.
 
 ## Personalizar
 

@@ -35,16 +35,30 @@
         var cell = document.createElement("div");
         cell.className = "cell";
         cell.id = "cell-" + r + "-" + c;
+        // Si existe img/logos/<id>.png (o item.logo), se muestra el logo; si no, el texto.
         var glyph = item.icon ? "" :
+          '<img class="logo" alt="">' +
           '<span class="glyph' + (item.glyph.length > 3 ? " small" : "") + '">' + item.glyph + "</span>";
         cell.innerHTML =
           '<div class="icon" style="background-image:' + iconBackground(item) + '">' +
             glyph + '<span class="gloss"></span><span class="edge"></span>' +
           '</div><div class="label">' + item.label + "</div>";
+        if (!item.icon) loadLogo(item, cell.querySelector(".icon"));
         rowEl.appendChild(cell);
       });
       home.appendChild(rowEl);
     });
+  }
+
+  function loadLogo(item, iconEl) {
+    var img = iconEl.querySelector(".logo");
+    img.addEventListener("load", function () {
+      item._logo = img.src;
+      iconEl.classList.add("has-logo");
+      if (currentShelfId === item.id) { currentShelfId = null; setShelf(item); }
+    });
+    img.addEventListener("error", function () { img.parentNode.removeChild(img); });
+    img.src = item.logo || ("img/logos/" + item.id + ".png");
   }
 
   /* ---------- Top shelf ---------- */
@@ -60,7 +74,9 @@
       "radial-gradient(1100px 900px at 100% 100%, " + c[1] + " 0%, transparent 65%)," +
       "radial-gradient(800px 800px at 10% 0%, " + c[1] + "aa 0%, transparent 60%)," +
       "linear-gradient(180deg, " + c[0] + " 0%, #000 100%)";
-    el.innerHTML = '<div class="art-glyph">' + item.glyph + '</div><div class="grain"></div>';
+    el.innerHTML = (item._logo
+      ? '<img class="art-logo" src="' + item._logo + '" alt="">'
+      : '<div class="art-glyph">' + item.glyph + "</div>") + '<div class="grain"></div>';
   }
 
   function setShelf(item) {

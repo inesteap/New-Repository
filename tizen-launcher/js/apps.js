@@ -10,7 +10,10 @@
  *   appId   App ID de Tizen (solo app; ver README para obtener los tuyos)
  *   label   nombre que aparece bajo el ícono enfocado
  *   glyph   texto del ícono si no hay imagen
- *   icon    (opcional) imagen 400x240 en img/icons/, reemplaza al glyph
+ *   logo    (automático) se usa img/logos/<id>.png si existe: PNG transparente,
+ *           de preferencia blanco, centrado sobre el color del ícono.
+ *           Puedes indicar otra ruta con logo: "img/logos/archivo.png".
+ *   icon    (opcional) imagen 400x240 en img/icons/ que reemplaza todo el ícono
  *   shelf   (opcional) imagen 1920x1080 en img/shelf/, fondo del top shelf
  *   colors  [oscuro, medio, brillo] para el ícono y el fondo generado
  *   kicker, desc, action, meta: textos del top shelf
@@ -43,6 +46,8 @@ var LAUNCHER_CONFIG = {
       colors: ["#020616", "#10287a", "#3c74e0"], kicker: "App", desc: "Streaming.", action: "Abrir" },
     { id: "prime", type: "app", appId: "3201910019365", label: "Prime Video", glyph: "prime",
       colors: ["#00111a", "#00597a", "#1fb6e8"], kicker: "App", desc: "Streaming.", action: "Abrir" },
+    { id: "applemusic", type: "app", appId: "3201908019041", label: "Apple Music", glyph: "♪",
+      colors: ["#1a0208", "#c4153a", "#ff4e6b"], kicker: "App", desc: "Música, radio y letras.", action: "Abrir" },
     { id: "spotify", type: "app", appId: "3201606009684", label: "Spotify", glyph: "♫",
       colors: ["#010d05", "#117a37", "#1ed760"], kicker: "App", desc: "Música y podcasts.", action: "Abrir" },
     { id: "plex", type: "app", appId: "3201512006963", label: "Plex", glyph: "›",
