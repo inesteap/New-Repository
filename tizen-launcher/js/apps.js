@@ -20,7 +20,7 @@
  */
 var LAUNCHER_CONFIG = {
   dock: [
-    { id: "ps5", type: "hdmi", port: 1, label: "PlayStation 5", glyph: "PS5",
+    { id: "ps5", type: "hdmi", port: 1, label: "PlayStation 5 Pro", glyph: "PS5",
       colors: ["#030a1f", "#0f3bb5", "#4f8bff"],
       kicker: "Consola", desc: "Retoma tus juegos justo donde los dejaste.",
       action: "Jugar", meta: "HDMI 1 · 4K · 120 Hz · VRR" },
@@ -36,7 +36,7 @@ var LAUNCHER_CONFIG = {
       colors: ["#000000", "#1d1d1f", "#5b5b60"],
       kicker: "App", desc: "Series, películas y deportes.", action: "Abrir", meta: "" },
     { id: "netflix", type: "app", appId: "3201907018807", label: "Netflix", glyph: "N",
-      colors: ["#0a0000", "#8f0710", "#e50914"],
+      colors: ["#000000", "#0b0b0b", "#2a2a2a"],
       kicker: "App", desc: "Series y películas.", action: "Abrir", meta: "" }
   ],
   grid: [
