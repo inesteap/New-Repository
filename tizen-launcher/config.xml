@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:tizen="http://tizen.org/ns/widgets"
+        id="http://localhost/hogarlauncher"
+        version="1.0.0"
+        viewmodes="maximized">
+  <tizen:application id="HgrLnchr01.Hogar" package="HgrLnchr01" required_version="6.0"/>
+  <name>Hogar</name>
+  <description>Launcher minimalista estilo set-top box, sin anuncios.</description>
+  <content src="index.html"/>
+  <icon src="icon.png"/>
+  <feature name="http://tizen.org/feature/screen.size.all"/>
+
+  <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+  <tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>
+  <tizen:privilege name="http://tizen.org/privilege/tv.window"/>
+  <tizen:privilege name="http://tizen.org/privilege/internet"/>
+
+  <tizen:setting screen-orientation="landscape"
+                 context-menu="disable"
+                 background-support="disable"
+                 encryption="disable"
+                 install-location="auto"
+                 hwkey-event="enable"/>
+  <tizen:profile name="tv-samsung"/>
+</widget>

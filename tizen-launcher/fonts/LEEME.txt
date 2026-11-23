@@ -1,0 +1,6 @@
+Helvetica Neue es una fuente comercial y no se incluye aquí.
+Si tienes licencia, copia en esta carpeta:
+  HelveticaNeue-Regular.otf
+  HelveticaNeue-Medium.otf
+  HelveticaNeue-Bold.otf
+La app la usa automáticamente. Si no encuentra esos archivos, usa Inter (incluida, licencia OFL).
